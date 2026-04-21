@@ -1,4 +1,5 @@
 import '../styles/pages/About.css'
+import { portfolioData } from '../data/portfolio'
 
 export default function About() {
   return (
@@ -20,16 +21,16 @@ export default function About() {
 
           <div className="about-highlights">
             <div className="highlight">
-              <h3>Experience</h3>
-              <p>X+ years building web applications</p>
+              <h3>Years of Experience</h3>
+              <p>{portfolioData.experience.length} projects completed</p>
             </div>
             <div className="highlight">
               <h3>Focus</h3>
-              <p>Full-stack development & user experience</p>
+              <p>{portfolioData.personal.title}</p>
             </div>
             <div className="highlight">
               <h3>Location</h3>
-              <p>Your City, Country</p>
+              <p>{portfolioData.personal.location}</p>
             </div>
           </div>
         </div>

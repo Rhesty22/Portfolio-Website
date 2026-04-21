@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import '../styles/pages/Home.css'
+import { portfolioData } from '../data/portfolio'
 
 export default function Home() {
   return (
@@ -18,30 +19,17 @@ export default function Home() {
       <section className="featured-projects">
         <h2>Featured Projects</h2>
         <div className="projects-grid">
-          <article className="project-card">
-            <h3>Project One</h3>
-            <p>A brief description of your first project goes here.</p>
-            <div className="project-tags">
-              <span>React</span>
-              <span>JavaScript</span>
-            </div>
-          </article>
-          <article className="project-card">
-            <h3>Project Two</h3>
-            <p>A brief description of your second project goes here.</p>
-            <div className="project-tags">
-              <span>React</span>
-              <span>Node.js</span>
-            </div>
-          </article>
-          <article className="project-card">
-            <h3>Project Three</h3>
-            <p>A brief description of your third project goes here.</p>
-            <div className="project-tags">
-              <span>Vue</span>
-              <span>API</span>
-            </div>
-          </article>
+          {portfolioData.projects.slice(0, 3).map(project => (
+            <article key={project.id} className="project-card">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="project-tags">
+                {project.technologies.map(tech => (
+                  <span key={tech}>{tech}</span>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
       </section>
     </section>

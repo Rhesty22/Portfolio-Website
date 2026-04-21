@@ -1,24 +1,7 @@
 import '../styles/pages/Skills.css'
+import { skillsData } from '../data/skills'
 
 export default function Skills() {
-  const skillCategories = [
-    {
-      category: 'Frontend',
-      skills: ['React', 'JavaScript', 'HTML/CSS', 'Tailwind CSS', 'Vue.js']
-    },
-    {
-      category: 'Backend',
-      skills: ['Node.js', 'Express', 'Python', 'REST APIs', 'GraphQL']
-    },
-    {
-      category: 'Database',
-      skills: ['MongoDB', 'PostgreSQL', 'Firebase', 'MySQL']
-    },
-    {
-      category: 'Tools & Other',
-      skills: ['Git', 'Docker', 'VS Code', 'Figma', 'CI/CD']
-    }
-  ]
 
   return (
     <section className="skills">
@@ -27,12 +10,12 @@ export default function Skills() {
         <p className="section-subtitle">Technologies and tools I work with</p>
 
         <div className="skills-grid">
-          {skillCategories.map((category, idx) => (
+          {skillsData.map((category, idx) => (
             <div key={idx} className="skill-category">
               <h3>{category.category}</h3>
               <ul className="skill-list">
-                {category.skills.map(skill => (
-                  <li key={skill}>{skill}</li>
+                {category.items.map(item => (
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
             </div>

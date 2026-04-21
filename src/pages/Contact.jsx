@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../styles/pages/Contact.css'
+import { portfolioData } from '../data/portfolio'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -37,19 +38,19 @@ export default function Contact() {
           <div className="contact-info">
             <div className="info-item">
               <h3>Email</h3>
-              <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+              <p><a href={`mailto:${portfolioData.personal.email}`}>{portfolioData.personal.email}</a></p>
+            </div>
+            <div className="info-item">
+              <h3>GitHub</h3>
+              <p><a href={portfolioData.social.github} target="_blank" rel="noopener noreferrer">{portfolioData.social.github}</a></p>
+            </div>
+            <div className="info-item">
+              <h3>LinkedIn</h3>
+              <p><a href={portfolioData.social.linkedin} target="_blank" rel="noopener noreferrer">{portfolioData.social.linkedin}</a></p>
             </div>
             <div className="info-item">
               <h3>Location</h3>
-              <p>Your City, Country</p>
-            </div>
-            <div className="info-item">
-              <h3>Social</h3>
-              <div className="social-links">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-              </div>
+              <p>{portfolioData.personal.location}</p>
             </div>
           </div>
 
