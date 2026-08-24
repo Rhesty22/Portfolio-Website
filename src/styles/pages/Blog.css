@@ -1,17 +1,24 @@
 .blog {
   width: 100%;
+  min-height: calc(100vh - 76px);
+  padding: 4rem 0;
+  background: #f5f1ea;
 }
 
 .blog-container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 3rem 2rem;
+  background: #fbf8f3;
+  border: 1px solid #d9d1c5;
+  box-shadow: 8px 8px 0 #d9d1c5;
 }
 
 .blog h1 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 0.5rem;
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: -0.04em;
 }
 
 .articles-list {
@@ -22,16 +29,17 @@
 }
 
 .article-card {
-  background: var(--light-background);
+  background: #f5f1ea;
   padding: 2rem;
-  border-radius: 12px;
-  border-left: 4px solid var(--primary-color);
+  border-radius: 0;
+  border: 1px solid #d9d1c5;
+  border-left: 4px solid #b34d38;
   transition: var(--transition);
 }
 
 .article-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 102, 204, 0.12);
-  transform: translateX(8px);
+  box-shadow: 4px 4px 0 #d9d1c5;
+  transform: translate(-2px, -2px);
 }
 
 .article-header {

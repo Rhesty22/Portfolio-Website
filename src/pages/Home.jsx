@@ -9,7 +9,6 @@ export default function Home() {
         <div className="hero-content">
           <p className="hero-kicker">Portfolio</p>
           <h1>{portfolioData.personal.name}</h1>
-          <p className="hero-role">{portfolioData.personal.title}</p>
           <p>{portfolioData.personal.description}</p>
           <div className="hero-meta">
             <span>Based in {portfolioData.personal.location}</span>

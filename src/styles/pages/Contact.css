@@ -1,17 +1,24 @@
 .contact {
   width: 100%;
+  min-height: calc(100vh - 76px);
+  padding: 4rem 0;
+  background: #f5f1ea;
 }
 
 .contact-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 3rem 2rem;
+  background: #fbf8f3;
+  border: 1px solid #d9d1c5;
+  box-shadow: 8px 8px 0 #d9d1c5;
 }
 
 .contact h1 {
-  text-align: center;
+  text-align: left;
   margin-bottom: 0.5rem;
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: -0.04em;
 }
 
 .contact-content {
@@ -61,6 +68,9 @@
 
 /* Contact Form */
 .contact-form {
+  padding: 2rem;
+  background: #f5f1ea;
+  border: 1px solid #d9d1c5;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -103,7 +113,7 @@
 .form-group textarea {
   padding: 0.75rem 1rem;
   border: 2px solid var(--border-color);
-  border-radius: 8px;
+  border-radius: 0;
   font-family: inherit;
   font-size: 1rem;
   transition: var(--transition);

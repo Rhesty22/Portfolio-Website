@@ -8,16 +8,35 @@
   box-sizing: border-box;
 }
 
+:root {
+  --page-beige: #ead9c0;
+  --surface-beige: #fff8ec;
+  --panel-beige: #d6b995;
+  --ink-black: #21150f;
+  --ink-brown: #482719;
+  --accent-brown: #7b3f22;
+  --line-brown: #b88f67;
+  --background-color: var(--page-beige);
+  --light-background: var(--surface-beige);
+  --text-color: var(--ink-brown);
+  --light-text: var(--ink-black);
+  --border-color: var(--line-brown);
+  --primary-color: var(--accent-brown);
+  --secondary-color: #32180e;
+  --accent-color: var(--accent-brown);
+  --transition: 0.2s ease;
+}
+
 html {
   scroll-behavior: smooth;
-  background-color: #0a0e27;
-  color: #e0e7ff;
+  background-color: var(--page-beige);
+  color: var(--ink-black);
 }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #0a0e27;
-  color: #e0e7ff;
+  background-color: var(--page-beige);
+  color: var(--ink-black);
   line-height: 1.6;
 }
 
@@ -31,7 +50,6 @@ button {
   font-family: inherit;
 }
 
-/* Custom utility classes */
 @layer components {
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
@@ -62,65 +80,57 @@ button {
   }
 }
 
-/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f1419;
+  background: var(--panel-beige);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: var(--accent-brown);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: var(--secondary-color);
 }
 
-/* Selection styling */
-::selection {
-  background-color: #06b6d4;
-  color: #0a0e27;
-}
-
+::selection,
 ::-moz-selection {
-  background-color: #06b6d4;
-  color: #0a0e27;
+  background-color: #d6ae8f;
+  color: var(--ink-black);
 }
 
 .btn {
-  transition: var(--transition);
   display: inline-block;
   border: 2px solid transparent;
+  transition: var(--transition);
 }
 
 .btn-primary {
   background-color: var(--primary-color);
-  color: white;
+  color: #fff8ef;
 }
 
 .btn-primary:hover {
   background-color: var(--secondary-color);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+  color: #fff8ef;
 }
 
 .btn-secondary {
-  background-color: transparent;
   color: var(--primary-color);
   border-color: var(--primary-color);
 }
 
 .btn-secondary:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: #fff8ef;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
+  color: var(--ink-brown);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.5rem;
@@ -139,11 +149,11 @@ h3 {
 }
 
 p {
+  color: var(--ink-black);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
-/* Responsive Typography */
 @media (max-width: 768px) {
   h1 {
     font-size: 2rem;

@@ -1,19 +1,21 @@
 .home {
   width: 100%;
-  background: #f5f1ea;
-  color: #242321;
+  background: var(--page-beige);
+  color: var(--ink-black);
 }
 
 .hero {
-  background: #f5f1ea;
-  color: #242321;
+  background-color: var(--page-beige);
+  background-image: linear-gradient(rgba(255, 248, 236, 0.32) 1px, transparent 1px), linear-gradient(90deg, rgba(123, 63, 34, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--ink-black);
   padding: clamp(6rem, 13vw, 11rem) 2rem clamp(5rem, 10vw, 8rem);
   text-align: left;
   min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid #d9d1c5;
+  border-bottom: 1px solid var(--line-brown);
 }
 
 .hero-content {
@@ -41,18 +43,11 @@
 
 .hero-kicker,
 .section-kicker {
-  color: #b34d38 !important;
+  color: var(--accent-brown) !important;
   font-size: 0.75rem !important;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-}
-
-.hero-role {
-  color: #242321 !important;
-  font-size: 1.45rem !important;
-  font-weight: 600;
-  margin-bottom: 1rem !important;
 }
 
 .hero-meta {
@@ -60,13 +55,13 @@
   flex-wrap: wrap;
   gap: 0.75rem 2rem;
   margin: 2rem 0;
-  color: #777067;
+  color: var(--ink-brown);
   font-size: 0.9rem;
 }
 
 .hero-meta span::before {
   content: '•';
-  color: #b34d38;
+  color: var(--accent-brown);
   margin-right: 0.6rem;
 }
 
@@ -93,8 +88,8 @@
 }
 
 .text-link:hover {
-  color: #b34d38;
-  border-color: #b34d38;
+  color: var(--accent-brown);
+  border-color: var(--accent-brown);
 }
 
 .featured-projects {
@@ -110,7 +105,7 @@
 }
 
 .section-heading {
-  border-bottom: 1px solid #d9d1c5;
+  border-bottom: 1px solid var(--line-brown);
   margin-bottom: 2.5rem;
 }
 
@@ -123,7 +118,7 @@
 }
 
 .project-card {
-  background: #f5f1ea;
+  background: var(--surface-beige);
   padding: 2rem;
   min-height: 240px;
   transition: background-color 0.2s ease;
@@ -132,7 +127,7 @@
 
 .project-card:hover {
   transform: none;
-  background: #ebe4da;
+  background: #f1dfc6;
 }
 
 .project-card h3 {
@@ -153,7 +148,7 @@
 
 .project-tags span {
   background-color: transparent;
-  color: #b34d38;
+  color: var(--accent-brown);
   padding: 0.25rem 0.75rem 0.25rem 0;
   border-radius: 0;
   font-size: 0.85rem;
