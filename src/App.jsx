@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navigation from './components/Navigation'
-import Footer from './components/Footer'
+import PublicLayout from './components/layout/PublicLayout'
 import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
@@ -12,8 +11,7 @@ import './styles/App.css'
 function App() {
   return (
     <Router>
-      <Navigation />
-      <main className="main-content">
+      <PublicLayout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -21,9 +19,9 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
         </Routes>
-      </main>
-      <Footer />
+      </PublicLayout>
     </Router>
   )
 }

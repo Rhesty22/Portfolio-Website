@@ -12,6 +12,7 @@ export default function Home() {
           <div className="cta-buttons">
             <Link to="/projects" className="btn btn-primary">View My Work</Link>
             <Link to="/contact" className="btn btn-secondary">Get In Touch</Link>
+            <a href="/documents/Rhesty_Adormeo_Resume.pdf" download className="btn btn-secondary">Download Resume</a>
           </div>
         </div>
       </div>

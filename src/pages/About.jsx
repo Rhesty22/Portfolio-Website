@@ -38,7 +38,7 @@ export default function About() {
         <div className="about-section">
           <h2>Resume</h2>
           <p>Download my resume to learn more about my experience and qualifications.</p>
-          <a href="/resume.pdf" download className="btn btn-primary">Download Resume</a>
+          <a href="/documents/Rhesty_Adormeo_Resume.pdf" download className="btn btn-primary">Download Resume</a>
         </div>
       </div>
     </section>
