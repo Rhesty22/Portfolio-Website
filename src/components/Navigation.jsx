@@ -6,14 +6,11 @@ export default function Navigation() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          {'<Dev Portfolio />'}
+          {'Rhesty Adormeo'}
         </Link>
         <ul className="nav-menu">
           <li className="nav-item">
             <Link to="/" className="nav-link">Home</Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/about" className="nav-link">About</Link>
           </li>
           <li className="nav-item">
             <Link to="/projects" className="nav-link">Projects</Link>

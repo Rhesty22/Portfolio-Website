@@ -1,6 +1,11 @@
 import { useState } from 'react'
 import '../styles/pages/Contact.css'
 import { portfolioData } from '../data/portfolio'
+import emailIcon from '../assets/icons/envelope-regular-full.svg'
+import githubIcon from '../assets/icons/github.svg'
+import linkedinIcon from '../assets/icons/square-linkedin-brands-solid-full.svg'
+import phoneIcon from '../assets/icons/phone-solid-full.svg'
+import locationIcon from '../assets/icons/location-dot-solid-full.svg'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -37,19 +42,23 @@ export default function Contact() {
         <div className="contact-content">
           <div className="contact-info">
             <div className="info-item">
-              <h3>Email</h3>
+              <h3><img src={emailIcon} alt="" className="contact-icon" />Email</h3>
               <p><a href={`mailto:${portfolioData.personal.email}`}>{portfolioData.personal.email}</a></p>
             </div>
             <div className="info-item">
-              <h3>GitHub</h3>
+              <h3><img src={githubIcon} alt="" className="contact-icon" />GitHub</h3>
               <p><a href={portfolioData.social.github} target="_blank" rel="noopener noreferrer">{portfolioData.social.github}</a></p>
             </div>
             <div className="info-item">
-              <h3>LinkedIn</h3>
+              <h3><img src={linkedinIcon} alt="" className="contact-icon" />LinkedIn</h3>
               <p><a href={portfolioData.social.linkedin} target="_blank" rel="noopener noreferrer">{portfolioData.social.linkedin}</a></p>
             </div>
             <div className="info-item">
-              <h3>Location</h3>
+              <h3><img src={phoneIcon} alt="" className="contact-icon" />Phone</h3>
+              <p><a href={`tel:${portfolioData.personal.phone}`}>{portfolioData.personal.phone}</a></p>
+            </div>
+            <div className="info-item">
+              <h3><img src={locationIcon} alt="" className="contact-icon" />Location</h3>
               <p>{portfolioData.personal.location}</p>
             </div>
           </div>

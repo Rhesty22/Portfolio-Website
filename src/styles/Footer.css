@@ -45,6 +45,27 @@
   font-size: 0.9rem;
 }
 
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+
+.footer-social-link:hover {
+  color: #22d3ee;
+}
+
+.footer-social-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 1.5rem;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 2rem 1rem 1rem;
