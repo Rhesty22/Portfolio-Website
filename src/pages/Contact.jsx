@@ -42,23 +42,23 @@ export default function Contact() {
         <div className="contact-content">
           <div className="contact-info">
             <div className="info-item">
-              <h3><img src={emailIcon} alt="" className="contact-icon" />Email</h3>
+              <h3><img src={emailIcon} alt="" className="contact-icon" /><span>Email</span></h3>
               <p><a href={`mailto:${portfolioData.personal.email}`}>{portfolioData.personal.email}</a></p>
             </div>
             <div className="info-item">
-              <h3><img src={githubIcon} alt="" className="contact-icon" />GitHub</h3>
+              <h3><img src={githubIcon} alt="" className="contact-icon" /><span>GitHub</span></h3>
               <p><a href={portfolioData.social.github} target="_blank" rel="noopener noreferrer">{portfolioData.social.github}</a></p>
             </div>
             <div className="info-item">
-              <h3><img src={linkedinIcon} alt="" className="contact-icon" />LinkedIn</h3>
+              <h3><img src={linkedinIcon} alt="" className="contact-icon" /><span>LinkedIn</span></h3>
               <p><a href={portfolioData.social.linkedin} target="_blank" rel="noopener noreferrer">{portfolioData.social.linkedin}</a></p>
             </div>
             <div className="info-item">
-              <h3><img src={phoneIcon} alt="" className="contact-icon" />Phone</h3>
+              <h3><img src={phoneIcon} alt="" className="contact-icon" /><span>Phone</span></h3>
               <p><a href={`tel:${portfolioData.personal.phone}`}>{portfolioData.personal.phone}</a></p>
             </div>
             <div className="info-item">
-              <h3><img src={locationIcon} alt="" className="contact-icon" />Location</h3>
+              <h3><img src={locationIcon} alt="" className="contact-icon" /><span>Location</span></h3>
               <p>{portfolioData.personal.location}</p>
             </div>
           </div>

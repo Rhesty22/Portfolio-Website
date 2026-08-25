@@ -59,7 +59,7 @@ export const portfolioData = {
   ],
 
   social: {
-    github: 'https://github.com/adormeorhesty',
+    github: 'https://github.com/Rhesty22',
     linkedin: 'https://linkedin.com/in/adormeorhesty',
     twitter: 'https://twitter.com/adormeorhesty',
     email: 'adormeorhesty@example.com',

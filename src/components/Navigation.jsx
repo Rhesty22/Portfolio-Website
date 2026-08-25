@@ -19,9 +19,6 @@ export default function Navigation() {
             <Link to="/skills" className="nav-link">Skills</Link>
           </li>
           <li className="nav-item">
-            <Link to="/blog" className="nav-link">Blog</Link>
-          </li>
-          <li className="nav-item">
             <Link to="/contact" className="nav-link nav-link-cta">Contact</Link>
           </li>
         </ul>
