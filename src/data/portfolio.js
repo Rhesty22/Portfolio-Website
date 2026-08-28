@@ -37,6 +37,15 @@ export const portfolioData = {
       link: '#',
       github: '#',
     },
+    {
+      id: 4,
+      title: 'DINOTEN',
+      description: 'Developed a top-down survival game in Unity where players battle enemies, gather resources, and survive escalating challenges.',
+      image: '/images/dinoten.jpg',
+      technologies: ['Unity', 'C#', 'Game Development', 'Top-Down Survival'],
+      link: '#',
+      github: '#',
+    },
   ],
 
   experience: [

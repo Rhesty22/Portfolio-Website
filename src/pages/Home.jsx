@@ -75,9 +75,42 @@ export default function Home() {
           </div>
 
           <div className="about-section">
-            <h2>Resume</h2>
-            <p>Download my resume to learn more about my experience and qualifications.</p>
-            <a href="/documents/Rhesty_Adormeo_Resume.pdf" download className="btn btn-primary">Download Resume</a>
+            <div className="credential-shelf">
+              <div className="shelf-header">
+                <p className="section-kicker">Credentials</p>
+                <h2>Resume & certificates</h2>
+              </div>
+
+              <article className="resume-slot">
+                <div>
+                  <span className="credential-label">Top shelf</span>
+                  <h3>Resume</h3>
+                  <p>My experience, qualifications, and the work behind this portfolio.</p>
+                </div>
+                <a href="/documents/Rhesty_Adormeo_Resume.pdf" download className="btn btn-primary">Download resume</a>
+              </article>
+
+              <div className="certificate-shelf">
+                <span className="credential-label">Certificates</span>
+                <div className="certificate-grid">
+                  <article className="certificate-slot">
+                    <span className="certificate-number">01</span>
+                    <h3>Frontend development</h3>
+                    <a href="/documents/frontend-development-certificate.pdf" download>Download certificate <span aria-hidden="true">↗</span></a>
+                  </article>
+                  <article className="certificate-slot">
+                    <span className="certificate-number">02</span>
+                    <h3>Responsive web design</h3>
+                    <a href="/documents/responsive-web-design-certificate.pdf" download>Download certificate <span aria-hidden="true">↗</span></a>
+                  </article>
+                  <article className="certificate-slot">
+                    <span className="certificate-number">03</span>
+                    <h3>Full-stack foundations</h3>
+                    <a href="/documents/full-stack-foundations-certificate.pdf" download>Download certificate <span aria-hidden="true">↗</span></a>
+                  </article>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
