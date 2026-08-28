@@ -1,15 +1,19 @@
 export const skillsData = [
   {
-    category: 'Frontend',
-    items: ['React', 'Vue.js', 'HTML5', 'CSS3', 'Tailwind CSS', 'JavaScript', 'TypeScript'],
+    category: 'Languages',
+    items: ['JavaScript', 'TypeScript', 'Python', 'C#', 'HTML5', 'CSS3'],
   },
   {
-    category: 'Backend',
-    items: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Python', 'REST APIs', 'JWT Authentication'],
+    category: 'Technologies',
+    items: ['React', 'Vue.js', 'Tailwind CSS', 'Node.js', 'Express', 'REST APIs', 'JWT Authentication'],
   },
   {
-    category: 'Tools & Platforms',
-    items: ['Docker', 'Docker Compose', 'Git', 'AWS', 'Vercel', 'GitHub', 'VS Code'],
+    category: 'Development Tools',
+    items: ['Unity', 'Unity Editor', 'Docker', 'Docker Compose', 'Git', 'GitHub', 'VS Code', 'AWS', 'Vercel', 'MongoDB', 'PostgreSQL'],
+  },
+  {
+    category: 'Game Development',
+    items: ['Top-Down Games', 'Survival Game Design', 'Gameplay Systems'],
   },
 ];
 

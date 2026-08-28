@@ -110,28 +110,37 @@
 
 .media-arrow {
   position: absolute;
-  top: 50%;
+  top: 0;
   z-index: 2;
-  width: 2rem;
-  height: 2rem;
+  width: 22%;
+  height: 100%;
   border: 0;
-  border-radius: 50%;
-  background: rgba(36, 35, 33, 0.82);
-  color: #fff8ec;
+  border-radius: 0;
+  background: transparent;
+  color: #77736d;
   cursor: pointer;
-  transform: translateY(-50%);
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.5;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
 .media-arrow:hover {
-  background: var(--accent-brown);
+  background: rgba(36, 35, 33, 0.3);
+  opacity: 1;
+}
+
+.media-arrow span {
+  display: block;
 }
 
 .media-arrow-left {
-  left: 0.65rem;
+  left: 0;
 }
 
 .media-arrow-right {
-  right: 0.65rem;
+  right: 0;
 }
 
 .media-dots {

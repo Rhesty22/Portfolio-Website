@@ -15,9 +15,9 @@ export default function Home() {
             <span>Available for selected work</span>
           </div>
           <div className="cta-buttons">
-            <Link to="/projects" className="btn btn-primary">View projects</Link>
+            <Link to="/projects" className="btn btn-secondary">View projects</Link>
             <Link to="/contact" className="btn btn-secondary">Get in touch</Link>
-            <a href="/documents/Rhesty_Adormeo_Resume.pdf" download className="text-link">Download resume <span aria-hidden="true">↗</span></a>
+            <a href="/documents/Rhesty_Adormeo_Resume.pdf" download className="btn btn-secondary">Download resume</a>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ export default function Home() {
                   <h3>Resume</h3>
                   <p>My experience, qualifications, and the work behind this portfolio.</p>
                 </div>
-                <a href="/documents/Rhesty_Adormeo_Resume.pdf" download className="btn btn-primary">Download resume</a>
+                <a href="/documents/Rhesty_Adormeo_Resume.pdf" download className="btn btn-secondary">Download resume</a>
               </article>
 
               <div className="certificate-shelf">
@@ -96,17 +96,17 @@ export default function Home() {
                   <article className="certificate-slot">
                     <span className="certificate-number">01</span>
                     <h3>Frontend development</h3>
-                    <a href="/documents/frontend-development-certificate.pdf" download>Download certificate <span aria-hidden="true">↗</span></a>
+                    <a href="/documents/frontend-development-certificate.pdf" download className="btn btn-secondary">Download certificate</a>
                   </article>
                   <article className="certificate-slot">
                     <span className="certificate-number">02</span>
                     <h3>Responsive web design</h3>
-                    <a href="/documents/responsive-web-design-certificate.pdf" download>Download certificate <span aria-hidden="true">↗</span></a>
+                    <a href="/documents/responsive-web-design-certificate.pdf" download className="btn btn-secondary">Download certificate</a>
                   </article>
                   <article className="certificate-slot">
                     <span className="certificate-number">03</span>
                     <h3>Full-stack foundations</h3>
-                    <a href="/documents/full-stack-foundations-certificate.pdf" download>Download certificate <span aria-hidden="true">↗</span></a>
+                    <a href="/documents/full-stack-foundations-certificate.pdf" download className="btn btn-secondary">Download certificate</a>
                   </article>
                 </div>
               </div>

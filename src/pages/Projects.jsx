@@ -12,7 +12,7 @@ function ProjectCard({ project }) {
     <article className="project-card-full">
       <h3>{project.title}</h3>
       <div className="project-media" aria-label={`${project.title} media`}>
-        <button type="button" className="media-arrow media-arrow-left" onClick={showPreviousMedia} aria-label="Show previous media">←</button>
+        <button type="button" className="media-arrow media-arrow-left" onClick={showPreviousMedia} aria-label="Show previous media"><span aria-hidden="true">←</span></button>
         <div className="project-media-viewport">
           <div className="project-media-track" style={{ transform: `translateX(-${activeMedia * 50}%)` }}>
             <div className="project-media-slide">
@@ -31,7 +31,7 @@ function ProjectCard({ project }) {
             </div>
           </div>
         </div>
-        <button type="button" className="media-arrow media-arrow-right" onClick={showNextMedia} aria-label="Show next media">→</button>
+        <button type="button" className="media-arrow media-arrow-right" onClick={showNextMedia} aria-label="Show next media"><span aria-hidden="true">→</span></button>
         <div className="media-dots" aria-hidden="true">
           <span className={activeMedia === 0 ? 'active' : ''} />
           <span className={activeMedia === 1 ? 'active' : ''} />

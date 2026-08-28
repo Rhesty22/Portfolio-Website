@@ -12,8 +12,8 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: 'Shipped Shooting Game Docker',
-      description: 'Built a full-stack pixel shooting game with enemy AI, player upgrades, ricochet mechanics, and auto-shoot systems.',
+      title: 'Limitless Ascension',
+      description: 'A Xianxia Cultivation idle game with player progression and skill trees.',
       image: '/images/project1.jpg',
       technologies: ['React', 'Canvas API', 'JavaScript', 'Docker'],
       link: '#',
@@ -42,7 +42,7 @@ export const portfolioData = {
       title: 'DINOTEN',
       description: 'Developed a top-down survival game in Unity where players battle enemies, gather resources, and survive escalating challenges.',
       image: '/images/dinoten.jpg',
-      technologies: ['Unity', 'C#', 'Game Development', 'Top-Down Survival'],
+      technologies: ['Game Development', 'Unity', 'C#', 'Top-Down Survival'],
       link: '#',
       github: '#',
     },

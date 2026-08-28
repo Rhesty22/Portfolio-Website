@@ -8,7 +8,7 @@ import './styles/App.css'
 
 function App() {
   return (
-    <Router>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <PublicLayout>
         <Routes>
           <Route path="/" element={<Home />} />

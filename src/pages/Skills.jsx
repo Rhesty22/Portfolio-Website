@@ -6,7 +6,7 @@ export default function Skills() {
   return (
     <section className="skills">
       <div className="skills-container">
-        <h1>Skills & Services</h1>
+        <h1>Skills</h1>
         <p className="section-subtitle">Technologies and tools I work with</p>
 
         <div className="skills-grid">
@@ -22,27 +22,6 @@ export default function Skills() {
           ))}
         </div>
 
-        <section className="services">
-          <h2>What I Offer</h2>
-          <div className="services-grid">
-            <div className="service-card">
-              <h3>Web Development</h3>
-              <p>Custom web applications tailored to your needs</p>
-            </div>
-            <div className="service-card">
-              <h3>Full-Stack Development</h3>
-              <p>End-to-end development from frontend to backend</p>
-            </div>
-            <div className="service-card">
-              <h3>UI/UX Design</h3>
-              <p>Beautiful and user-friendly interfaces</p>
-            </div>
-            <div className="service-card">
-              <h3>Consultation</h3>
-              <p>Technical advice and mentoring</p>
-            </div>
-          </div>
-        </section>
       </div>
     </section>
   )

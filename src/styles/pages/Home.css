@@ -80,6 +80,15 @@
   border-radius: 999px;
 }
 
+.cta-buttons .btn:hover {
+  transform: translateY(-2px);
+}
+
+.cta-buttons .btn:focus-visible {
+  outline: 3px solid #d6ae8f;
+  outline-offset: 3px;
+}
+
 .text-link {
   color: #242321;
   font-weight: 700;
@@ -364,6 +373,8 @@
 
 .resume-slot .btn {
   flex-shrink: 0;
+  padding: 1rem 1.6rem;
+  font-size: 1rem;
   border-radius: 999px;
 }
 
@@ -396,16 +407,19 @@
   font-size: 1.15rem;
 }
 
-.certificate-slot a {
+.certificate-slot .btn {
+  align-self: flex-start;
+  padding: 0.7rem 1rem;
+  border-color: #f3d4a9;
   color: #fff8ec;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 0.25rem;
 }
 
-.certificate-slot a:hover {
-  color: #f3d4a9;
+.certificate-slot .btn:hover {
+  border-color: #fff8ec;
+  background-color: #f3d4a9;
+  color: #62331f;
 }
 
 .about-section p {
