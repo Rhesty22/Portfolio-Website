@@ -5,19 +5,14 @@ import Button from '../common/Button';
 const Hero = () => {
   const projects = [
     {
-      title: 'Shipped Shooting Game Docker',
-      description: 'Built a full-stack pixel shooting game with enemy AI, player upgrades, ricochet mechanics, and auto-shoot systems.',
-      link: 'Open Project Page',
+      title: 'DINOTEN',
+      description: 'A top-down survival game developed in Unity.',
+      link: 'View Project',
     },
     {
-      title: 'Containerized Full Stack Workflow',
-      description: 'Configured Docker and Docker Compose for consistent local development and deployment across environments.',
-      link: 'View Skills',
-    },
-    {
-      title: 'Designed Responsive React UI',
-      description: 'Created modern, mobile-friendly pages with reusable components, visual hierarchy, and smooth interactions.',
-      link: 'Work With Me',
+      title: 'Fishing Minigame',
+      description: 'A fishing minigame developed in Unity.',
+      link: 'View Project',
     },
   ];
 

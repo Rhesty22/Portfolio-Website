@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
 import '../styles/pages/Home.css'
+import '../styles/pages/Projects.css'
 import { portfolioData } from '../data/portfolio'
+import { ProjectCard } from './Projects'
 
 export default function Home() {
   return (
@@ -27,17 +29,9 @@ export default function Home() {
           <p className="section-kicker">Selected work</p>
           <h2>Projects with a practical edge</h2>
         </div>
-        <div className="projects-grid">
-          {portfolioData.projects.slice(0, 3).map(project => (
-            <article key={project.id} className="project-card">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="project-tags">
-                {project.technologies.map(tech => (
-                  <span key={tech}>{tech}</span>
-                ))}
-              </div>
-            </article>
+        <div className="projects-grid-full">
+          {portfolioData.projects.filter(project => ['DINOTEN', 'Fishing Minigame'].includes(project.title)).map(project => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </section>
@@ -74,7 +68,7 @@ export default function Home() {
             <div className="credential-shelf">
               <div className="shelf-header">
                 <p className="section-kicker">Credentials</p>
-                <h2>Resume & certificates</h2>
+                <h2>Resume</h2>
               </div>
 
               <article className="resume-slot">
@@ -86,26 +80,6 @@ export default function Home() {
                 <a href="/documents/Rhesty_Adormeo_Resume.pdf" download className="btn btn-secondary">Download resume</a>
               </article>
 
-              <div className="certificate-shelf">
-                <span className="credential-label">Certificates</span>
-                <div className="certificate-grid">
-                  <article className="certificate-slot">
-                    <span className="certificate-number">01</span>
-                    <h3>Frontend development</h3>
-                    <a href="/documents/frontend-development-certificate.pdf" download className="btn btn-secondary">Download certificate</a>
-                  </article>
-                  <article className="certificate-slot">
-                    <span className="certificate-number">02</span>
-                    <h3>Responsive web design</h3>
-                    <a href="/documents/responsive-web-design-certificate.pdf" download className="btn btn-secondary">Download certificate</a>
-                  </article>
-                  <article className="certificate-slot">
-                    <span className="certificate-number">03</span>
-                    <h3>Full-stack foundations</h3>
-                    <a href="/documents/full-stack-foundations-certificate.pdf" download className="btn btn-secondary">Download certificate</a>
-                  </article>
-                </div>
-              </div>
             </div>
           </div>
         </div>

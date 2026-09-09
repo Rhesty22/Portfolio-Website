@@ -1,12 +1,25 @@
 import '../styles/pages/Projects.css'
 import { portfolioData } from '../data/portfolio'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-function ProjectCard({ project }) {
+export function ProjectCard({ project }) {
   const [activeMedia, setActiveMedia] = useState(0)
+  const videoRef = useRef(null)
+  const mediaImages = project.mediaImages ?? (project.mediaImage ? [project.mediaImage] : [])
+  const mediaCount = 1 + mediaImages.length
+  const mediaSlideStyle = { flex: `0 0 ${100 / mediaCount}%` }
 
-  const showNextMedia = () => setActiveMedia(current => (current + 1) % 2)
-  const showPreviousMedia = () => setActiveMedia(current => (current + 2 - 1) % 2)
+  useEffect(() => {
+    if (activeMedia !== 0) {
+      videoRef.current?.pause()
+    }
+  }, [activeMedia])
+
+  const showNextMedia = () => setActiveMedia(current => (current + 1) % mediaCount)
+  const showPreviousMedia = () => setActiveMedia(current => (current + mediaCount - 1) % mediaCount)
+  const playVideoOnHover = () => {
+    videoRef.current?.play().catch(() => {})
+  }
 
   return (
     <article className="project-card-full">
@@ -14,27 +27,44 @@ function ProjectCard({ project }) {
       <div className="project-media" aria-label={`${project.title} media`}>
         <button type="button" className="media-arrow media-arrow-left" onClick={showPreviousMedia} aria-label="Show previous media"><span aria-hidden="true">←</span></button>
         <div className="project-media-viewport">
-          <div className="project-media-track" style={{ transform: `translateX(-${activeMedia * 50}%)` }}>
-            <div className="project-media-slide">
+          <div
+            className="project-media-track"
+            style={{
+              transform: `translateX(-${activeMedia * (100 / mediaCount)}%)`,
+              width: `${mediaCount * 100}%`,
+            }}
+          >
+            <div className="project-media-slide" style={mediaSlideStyle}>
               {project.video ? (
-                <video src={project.video} controls onEnded={showNextMedia} />
+                <video
+                  ref={videoRef}
+                  src={project.video}
+                  controls
+                  muted
+                  playsInline
+                  onMouseEnter={playVideoOnHover}
+                  onEnded={showNextMedia}
+                />
               ) : (
                 <div className="project-media-slot">Video</div>
               )}
             </div>
-            <div className="project-media-slide">
-              {project.mediaImage ? (
-                <img src={project.mediaImage} alt={`${project.title} screenshot`} />
-              ) : (
+            {mediaImages.length > 0 ? mediaImages.map((image, index) => (
+              <div className="project-media-slide" style={mediaSlideStyle} key={image}>
+                <img src={image} alt={`${project.title} screenshot ${index + 1}`} />
+              </div>
+            )) : (
+              <div className="project-media-slide" style={mediaSlideStyle}>
                 <div className="project-media-slot">Picture</div>
-              )}
-            </div>
+              </div>
+            )}
           </div>
         </div>
         <button type="button" className="media-arrow media-arrow-right" onClick={showNextMedia} aria-label="Show next media"><span aria-hidden="true">→</span></button>
         <div className="media-dots" aria-hidden="true">
-          <span className={activeMedia === 0 ? 'active' : ''} />
-          <span className={activeMedia === 1 ? 'active' : ''} />
+          {Array.from({ length: mediaCount }, (_, index) => (
+            <span key={index} className={activeMedia === index ? 'active' : ''} />
+          ))}
         </div>
       </div>
       <p>{project.description}</p>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fishingMinigameVideo from '../assets/videos/Fishing Minigame.mp4';
 import fishingMinigameGameplayImage from '../assets/images/Fishing Minigame Gameplay.jpg';
 import fishingMinigameGameplaySampleImage from '../assets/images/Fishing Minigame Gameplay sample.jpg';
@@ -7,15 +6,12 @@ import dinotenVideo from '../assets/videos/Dinoten Gameplay.mp4';
 import dinotenIconImage from '../assets/images/Dinoten Change Icon and Name.png';
 import dinotenGameplayImage from '../assets/images/Dinoten gameplay.png';
 import dinotenHomeImage from '../assets/images/Dinoten Home.png';
-
-=======
->>>>>>> parent of 1d4873a (updated projects, added videos & Images)
 export const portfolioData = {
   personal: {
     name: 'Adormeo Rhesty',
     title: 'Studying Game Development',
     description: 'I build fast, scalable web applications from polished frontends to robust backend services and deployment workflows.',
-    email: 'adormeorhesty@example.com',
+    email: 'adormeorhesty@gmail.com',
     phone: '+63 (917) 000-0000',
     location: 'Philippines',
     role: 'Full Stack Developer',
@@ -23,38 +19,26 @@ export const portfolioData = {
 
   projects: [
     {
-      id: 1,
-      title: 'Limitless Ascension',
-      description: 'A Xianxia Cultivation idle game with player progression and skill trees.',
-      image: '/images/project1.jpg',
-      technologies: ['React', 'Canvas API', 'JavaScript', 'Docker'],
-      link: '#',
-      github: '#',
-    },
-    {
-      id: 2,
-      title: 'Containerized Full Stack Workflow',
-      description: 'Configured Docker and Docker Compose for consistent local development and deployment across environments.',
-      image: '/images/project3.jpg',
-      technologies: ['Docker', 'Docker Compose', 'Node.js', 'PostgreSQL'],
-      link: '#',
-      github: '#',
-    },
-    {
-      id: 3,
-      title: 'Designed Responsive React UI',
-      description: 'Created modern, mobile-friendly pages with reusable components, visual hierarchy, and smooth interactions.',
-      image: '/images/project4.jpg',
-      technologies: ['React', 'Tailwind CSS', 'Responsive Design'],
-      link: '#',
-      github: '#',
-    },
-    {
       id: 4,
       title: 'DINOTEN',
       description: 'Developed a top-down survival game in Unity where players battle enemies, gather resources, and survive escalating challenges.',
-      image: '/images/dinoten.jpg',
+      video: dinotenVideo,
+      mediaImages: [dinotenGameplayImage, dinotenHomeImage, dinotenIconImage],
       technologies: ['Game Development', 'Unity', 'C#', 'Top-Down Survival'],
+      link: '#',
+      github: '#',
+    },
+    {
+      id: 5,
+      title: 'Fishing Minigame',
+      description: 'A fishing minigame developed in Unity with interactive gameplay and timing-based mechanics.',
+      video: fishingMinigameVideo,
+      mediaImages: [
+        fishingMinigameGameplayImage,
+        fishingMinigameGameplaySampleImage,
+        fishingMinigameShopImage,
+      ],
+      technologies: ['Unity', 'C#', 'Game Development'],
       link: '#',
       github: '#',
     },
@@ -83,7 +67,7 @@ export const portfolioData = {
     github: 'https://github.com/Rhesty22',
     linkedin: 'https://linkedin.com/in/adormeorhesty',
     twitter: 'https://twitter.com/adormeorhesty',
-    email: 'adormeorhesty@example.com',
+    email: 'adormeorhesty@gmail.com',
   },
 };
 

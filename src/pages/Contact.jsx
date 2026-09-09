@@ -37,8 +37,8 @@ export default function Contact() {
 
     setFormError('')
     const body = `Name: ${trimmedFormData.name}\nEmail: ${trimmedFormData.email}\n\n${trimmedFormData.message}`
-    const mailtoUrl = `mailto:${portfolioData.personal.email}?subject=${encodeURIComponent(trimmedFormData.subject)}&body=${encodeURIComponent(body)}`
-    window.location.href = mailtoUrl
+    const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(portfolioData.personal.email)}&su=${encodeURIComponent(trimmedFormData.subject)}&body=${encodeURIComponent(body)}`
+    window.location.href = gmailComposeUrl
   }
 
   return (

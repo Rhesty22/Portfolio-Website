@@ -308,8 +308,7 @@
 }
 
 .shelf-header,
-.resume-slot,
-.certificate-shelf {
+.resume-slot {
   position: relative;
   z-index: 1;
 }
@@ -347,8 +346,7 @@
   box-shadow: 0 5px 0 rgba(62, 31, 20, 0.28);
 }
 
-.credential-label,
-.certificate-number {
+.credential-label {
   display: block;
   color: #f3d4a9;
   font-size: 0.7rem;
@@ -376,50 +374,6 @@
   padding: 1rem 1.6rem;
   font-size: 1rem;
   border-radius: 999px;
-}
-
-.certificate-shelf {
-  padding-top: 2rem;
-}
-
-.certificate-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  margin-top: 0.75rem;
-  background: #62331f;
-  border: 1px solid #62331f;
-}
-
-.certificate-slot {
-  min-height: 190px;
-  padding: 1.25rem;
-  background: #a9653b;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.certificate-slot h3 {
-  margin: 1.5rem 0;
-  max-width: 12rem;
-  color: #fff8ec;
-  font-size: 1.15rem;
-}
-
-.certificate-slot .btn {
-  align-self: flex-start;
-  padding: 0.7rem 1rem;
-  border-color: #f3d4a9;
-  color: #fff8ec;
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.certificate-slot .btn:hover {
-  border-color: #fff8ec;
-  background-color: #f3d4a9;
-  color: #62331f;
 }
 
 .about-section p {
@@ -476,11 +430,4 @@
     margin-top: 1.25rem;
   }
 
-  .certificate-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .certificate-slot {
-    min-height: 150px;
-  }
 }
