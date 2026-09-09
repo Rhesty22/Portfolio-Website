@@ -28,15 +28,12 @@
   font-weight: 700;
 }
 
-.footer-monogram {
-  display: grid;
-  place-items: center;
+.footer-profile-image {
   width: 2.75rem;
   height: 2.75rem;
   border: 1px solid #e3c8ad;
-  color: #fff8ef;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .footer-description {

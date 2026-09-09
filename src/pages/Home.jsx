@@ -3,14 +3,17 @@ import '../styles/pages/Home.css'
 import '../styles/pages/Projects.css'
 import { portfolioData } from '../data/portfolio'
 import { ProjectCard } from './Projects'
+import profileImage from '../assets/images/ADORMEO, RHESTY H.GS301064.jpg'
 
 export default function Home() {
   return (
     <section className="home">
       <div className="hero">
         <div className="hero-content">
-          <p className="hero-kicker">Portfolio</p>
-          <h1>{portfolioData.personal.name}</h1>
+          <div className="hero-name-row">
+            <img src={profileImage} alt="Adormeo Rhesty" className="hero-profile-image" />
+            <h1>{portfolioData.personal.name}</h1>
+          </div>
           <p>{portfolioData.personal.description}</p>
           <div className="hero-meta">
             <span>Based in {portfolioData.personal.location}</span>

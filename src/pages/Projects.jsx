@@ -1,9 +1,11 @@
 import '../styles/pages/Projects.css'
 import { portfolioData } from '../data/portfolio'
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 
 export function ProjectCard({ project }) {
   const [activeMedia, setActiveMedia] = useState(0)
+  const [expandedImage, setExpandedImage] = useState(null)
   const videoRef = useRef(null)
   const mediaImages = project.mediaImages ?? (project.mediaImage ? [project.mediaImage] : [])
   const mediaCount = 1 + mediaImages.length
@@ -14,6 +16,30 @@ export function ProjectCard({ project }) {
       videoRef.current?.pause()
     }
   }, [activeMedia])
+
+  useEffect(() => {
+    const carouselTimer = window.setInterval(() => {
+      setActiveMedia(current => (current + 1) % mediaCount)
+    }, 3000)
+
+    return () => window.clearInterval(carouselTimer)
+  }, [mediaCount])
+
+  useEffect(() => {
+    if (!expandedImage) return undefined
+
+    const closeOnEscape = event => {
+      if (event.key === 'Escape') setExpandedImage(null)
+    }
+
+    document.addEventListener('keydown', closeOnEscape)
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.removeEventListener('keydown', closeOnEscape)
+      document.body.style.overflow = ''
+    }
+  }, [expandedImage])
 
   const showNextMedia = () => setActiveMedia(current => (current + 1) % mediaCount)
   const showPreviousMedia = () => setActiveMedia(current => (current + mediaCount - 1) % mediaCount)
@@ -51,7 +77,15 @@ export function ProjectCard({ project }) {
             </div>
             {mediaImages.length > 0 ? mediaImages.map((image, index) => (
               <div className="project-media-slide" style={mediaSlideStyle} key={image}>
-                <img src={image} alt={`${project.title} screenshot ${index + 1}`} />
+                <button
+                  type="button"
+                  className="project-image-button"
+                  onClick={() => setExpandedImage(image)}
+                  aria-label={`View ${project.title} screenshot ${index + 1} fullscreen`}
+                >
+                  <img src={image} alt={`${project.title} screenshot ${index + 1}`} />
+                  <span className="project-image-overlay" aria-hidden="true">View full image</span>
+                </button>
               </div>
             )) : (
               <div className="project-media-slide" style={mediaSlideStyle}>
@@ -77,6 +111,30 @@ export function ProjectCard({ project }) {
         <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
         <a href={project.github} target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
+      {expandedImage && createPortal(
+        <div
+          className="image-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${project.title} fullscreen image`}
+          onClick={() => setExpandedImage(null)}
+        >
+          <button
+            type="button"
+            className="image-lightbox-close"
+            onClick={() => setExpandedImage(null)}
+            aria-label="Close fullscreen image"
+          >
+            Close
+          </button>
+          <img
+            src={expandedImage}
+            alt={`${project.title} fullscreen screenshot`}
+            onClick={event => event.stopPropagation()}
+          />
+        </div>,
+        document.body
+      )}
     </article>
   )
 }

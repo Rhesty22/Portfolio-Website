@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import githubIcon from '../assets/icons/github.svg';
 import linkedinIcon from '../assets/icons/square-linkedin-brands-solid-full.svg';
 import emailIcon from '../assets/icons/envelope-regular-full.svg';
+import profileImage from '../assets/images/ADORMEO, RHESTY H.GS301064.jpg';
 import { portfolioData } from '../data/portfolio';
 import '../styles/Footer.css';
 
@@ -15,9 +16,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <Link to="/" className="footer-brand">
-              <div className="footer-monogram">
-                AR
-              </div>
+              <img src={profileImage} alt="Adormeo Rhesty" className="footer-profile-image" />
               <span>Portfolio</span>
             </Link>
             <p className="footer-description">Building modern web experiences with thoughtful design and reliable code.</p>

@@ -5,9 +5,7 @@ export default function Navigation() {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <Link to="/" className="nav-logo">
-          {'Rhesty Adormeo'}
-        </Link>
+        <Link to="/" className="nav-logo" aria-label="Portfolio home">Portfolio</Link>
         <ul className="nav-menu">
           <li className="nav-item">
             <Link to="/" className="nav-link">Home</Link>

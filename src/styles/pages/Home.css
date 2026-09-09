@@ -32,6 +32,21 @@
   animation: fadeInDown 0.8s ease;
 }
 
+.hero-name-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+}
+
+.hero-profile-image {
+  width: clamp(7rem, 14vw, 12rem);
+  height: auto;
+  flex: 0 0 auto;
+  border: 2px solid var(--accent-brown);
+  border-radius: 8px;
+  object-fit: contain;
+}
+
 .hero-content p {
   max-width: 620px;
   font-size: 1.2rem;
@@ -196,6 +211,15 @@
 
   .hero-content h1 {
     font-size: 3.5rem;
+  }
+
+  .hero-name-row {
+    align-items: flex-start;
+  }
+
+  .hero-profile-image {
+    width: 4.5rem;
+    height: auto;
   }
 
   .hero-content p {
