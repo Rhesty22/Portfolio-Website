@@ -14,7 +14,7 @@ export default function Contact() {
     subject: '',
     message: ''
   })
-  const [submitted, setSubmitted] = useState(false)
+  const [formError, setFormError] = useState('')
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -26,11 +26,19 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Here you would typically send the form data to a backend service
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
-    setFormData({ name: '', email: '', subject: '', message: '' })
-    setTimeout(() => setSubmitted(false), 3000)
+    const trimmedFormData = Object.fromEntries(
+      Object.entries(formData).map(([key, value]) => [key, value.trim()])
+    )
+
+    if (Object.values(trimmedFormData).some(value => !value)) {
+      setFormError('Please complete every field before sending your message.')
+      return
+    }
+
+    setFormError('')
+    const body = `Name: ${trimmedFormData.name}\nEmail: ${trimmedFormData.email}\n\n${trimmedFormData.message}`
+    const mailtoUrl = `mailto:${portfolioData.personal.email}?subject=${encodeURIComponent(trimmedFormData.subject)}&body=${encodeURIComponent(body)}`
+    window.location.href = mailtoUrl
   }
 
   return (
@@ -64,9 +72,9 @@ export default function Contact() {
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
-            {submitted && (
-              <div className="success-message">
-                Thank you for your message! I'll get back to you soon.
+            {formError && (
+              <div className="error-message" role="alert">
+                {formError}
               </div>
             )}
             <div className="form-group">

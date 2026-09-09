@@ -1,15 +1,15 @@
 export const skillsData = [
   {
     category: 'Languages',
-    items: ['JavaScript', 'TypeScript', 'Python', 'C#', 'HTML5', 'CSS3'],
+    items: ['JavaScript', 'HTML5', 'CSS3', 'C#'],
   },
   {
     category: 'Technologies',
-    items: ['React', 'Vue.js', 'Tailwind CSS', 'Node.js', 'Express', 'REST APIs', 'JWT Authentication'],
+    items: ['React', 'JSX', 'React Router', 'Vite', 'Tailwind CSS'],
   },
   {
     category: 'Development Tools',
-    items: ['Unity', 'Unity Editor', 'Docker', 'Docker Compose', 'Git', 'GitHub', 'VS Code', 'AWS', 'Vercel', 'MongoDB', 'PostgreSQL'],
+    items: ['Unity', 'Unity Editor', 'Docker', 'Docker Compose', 'Git', 'GitHub', 'VS Code', 'Vercel'],
   },
   {
     category: 'Game Development',

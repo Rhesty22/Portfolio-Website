@@ -1,7 +1,19 @@
+<<<<<<< HEAD
+import fishingMinigameVideo from '../assets/videos/Fishing Minigame.mp4';
+import fishingMinigameGameplayImage from '../assets/images/Fishing Minigame Gameplay.jpg';
+import fishingMinigameGameplaySampleImage from '../assets/images/Fishing Minigame Gameplay sample.jpg';
+import fishingMinigameShopImage from '../assets/images/Fishing Minigame Shop.png';
+import dinotenVideo from '../assets/videos/Dinoten Gameplay.mp4';
+import dinotenIconImage from '../assets/images/Dinoten Change Icon and Name.png';
+import dinotenGameplayImage from '../assets/images/Dinoten gameplay.png';
+import dinotenHomeImage from '../assets/images/Dinoten Home.png';
+
+=======
+>>>>>>> parent of 1d4873a (updated projects, added videos & Images)
 export const portfolioData = {
   personal: {
     name: 'Adormeo Rhesty',
-    title: 'Full-Stack Developer',
+    title: 'Studying Game Development',
     description: 'I build fast, scalable web applications from polished frontends to robust backend services and deployment workflows.',
     email: 'adormeorhesty@example.com',
     phone: '+63 (917) 000-0000',

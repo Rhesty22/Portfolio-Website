@@ -49,20 +49,16 @@ export default function Home() {
           <div className="about-content">
             <div className="about-text">
               <p>
-                I'm a passionate developer with expertise in building web applications.
-                I love turning complex problems into simple, beautiful, and intuitive designs.
+                I'm currently studying both web development and game development,
+                building my skills through hands-on projects and creative problem-solving.
               </p>
               <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to open source,
-                or sharing my knowledge through writing and mentoring.
+                I enjoy exploring new technologies, creating interactive experiences,
+                and turning ideas into simple, beautiful, and intuitive designs.
               </p>
             </div>
 
             <div className="about-highlights">
-              <div className="highlight">
-                <h3>Years of Experience</h3>
-                <p>{portfolioData.experience.length} projects completed</p>
-              </div>
               <div className="highlight">
                 <h3>Focus</h3>
                 <p>{portfolioData.personal.title}</p>

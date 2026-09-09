@@ -88,12 +88,12 @@
   gap: 1.5rem;
 }
 
-.success-message {
-  background-color: #d4edda;
-  color: #155724;
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
   padding: 1rem;
   border-radius: 8px;
-  border-left: 4px solid #28a745;
+  border-left: 4px solid #dc3545;
   margin-bottom: 1rem;
   animation: slideDown 0.3s ease;
 }
