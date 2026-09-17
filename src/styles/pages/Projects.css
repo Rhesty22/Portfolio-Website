@@ -9,8 +9,12 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 2rem;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background: #fbf8f3;
   border: 1px solid #d9d1c5;
+  border-radius: 3rem;
   box-shadow: 8px 8px 0 #d9d1c5;
 }
 
@@ -35,10 +39,16 @@
 }
 
 .project-card-full {
-  background: #f5f1ea;
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f1ea;
+  background-image: url("data:image/svg+xml,%3Csvg width='360' height='360' viewBox='0 0 360 360' xmlns='http://www.w3.org/2000/svg'%3E%3Cg transform='rotate(45 180 180)' fill='none' stroke='%23d9d1c5' stroke-linecap='round' stroke-linejoin='round' stroke-width='11' opacity='.58'%3E%3Cpath d='M-24 62C20 4 76 1 113 40s83 38 119-10 89-50 146-5'/%3E%3Cpath d='M-20 83c44-48 86-46 114-15s71 37 103 1 86-55 145-27'/%3E%3Cpath d='M-18 104c43-43 82-41 110-12s68 35 99 2 84-50 145-24'/%3E%3Cpath d='M-28 160c33-47 77-51 112-20s72 35 98 2 69-44 111-17 51 74 89 87'/%3E%3Cpath d='M-22 182c35-42 77-42 109-14s70 36 101 5 72-39 110-9 48 69 84 76'/%3E%3Cpath d='M-19 205c39-38 76-28 103 8s67 44 104 14 75-25 103 7 44 67 87 64'/%3E%3Cpath d='M-10 267c34-35 78-37 107-1s70 38 104 5 68-38 101-8 39 70 80 80'/%3E%3Cpath d='M-27 323c41-28 79-18 110 15s72 31 103 1 75-36 111 1'/%3E%3Cpath d='M45-18c-14 36-4 64 25 78s55 5 70-20'/%3E%3Cpath d='M275-18c-23 32-18 63 8 81s51 14 72-4'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   border: 1px solid #d9d1c5;
   padding: 2rem;
-  border-radius: 0;
+  border-radius: 3rem;
   transition: var(--transition);
   display: flex;
   flex-direction: column;
@@ -286,7 +296,9 @@
 /* Responsive */
 @media (max-width: 768px) {
   .projects-container {
-    padding: 0 1rem;
+    margin: 0 1rem;
+    padding: 2.5rem 1rem;
+    border-radius: 3rem;
   }
 
   .projects h1 {
