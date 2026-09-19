@@ -4,8 +4,13 @@ import '../styles/pages/Projects.css'
 import { portfolioData } from '../data/portfolio'
 import { ProjectCard } from './Projects'
 import profileImage from '../assets/images/ADORMEO, RHESTY H.GS301064.jpg'
+import { useProjects } from '../hooks/useProjects'
 
 export default function Home() {
+  const { projects } = useProjects({ optimisticProjects: portfolioData.projects })
+  const featuredProjects = (projects ?? portfolioData.projects)
+    .filter(project => ['DINOTEN', 'Fishing Minigame'].includes(project.title))
+
   return (
     <section className="home">
       <div className="hero">
@@ -33,7 +38,7 @@ export default function Home() {
           <h2>Projects with a practical edge</h2>
         </div>
         <div className="projects-grid-full">
-          {portfolioData.projects.filter(project => ['DINOTEN', 'Fishing Minigame'].includes(project.title)).map(project => (
+          {featuredProjects.map(project => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>

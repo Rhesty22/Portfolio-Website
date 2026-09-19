@@ -60,6 +60,79 @@
   transform: translate(-2px, -2px);
 }
 
+.project-card-skeleton {
+  pointer-events: none;
+}
+
+.skeleton-line,
+.skeleton-media,
+.skeleton-tags span,
+.skeleton-links span {
+  display: block;
+  background: linear-gradient(100deg, #e6ded2 30%, #f6f1e9 48%, #e6ded2 66%);
+  background-size: 220% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+.skeleton-title {
+  width: 48%;
+  height: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.skeleton-media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 1.5rem;
+}
+
+.skeleton-line {
+  width: 100%;
+  height: 0.9rem;
+  margin-bottom: 0.65rem;
+}
+
+.skeleton-line-short {
+  width: 72%;
+  margin-bottom: 1.5rem;
+}
+
+.skeleton-tags,
+.skeleton-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.skeleton-tags { margin-bottom: 1.5rem; }
+.skeleton-tags span { width: 4.75rem; height: 1.9rem; }
+.skeleton-tags span:nth-child(2) { width: 3.5rem; }
+.skeleton-tags span:nth-child(3) { width: 5.5rem; }
+
+.skeleton-links {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.skeleton-links span { flex: 1; height: 2rem; }
+
+.projects-refresh-status {
+  margin: 1rem 0 0;
+  color: var(--light-text);
+  font-size: 0.875rem;
+}
+
+@keyframes skeleton-shimmer {
+  to { background-position: -220% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-line,
+  .skeleton-media,
+  .skeleton-tags span,
+  .skeleton-links span { animation: none; }
+}
+
 .project-card-full h3 {
   color: var(--text-color);
   margin-bottom: 1rem;

@@ -1,7 +1,8 @@
 import '../styles/pages/Projects.css'
-import { portfolioData } from '../data/portfolio'
 import { useEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { useProjects } from '../hooks/useProjects'
+import ProjectCardSkeleton from '../components/ProjectCardSkeleton'
 
 export function ProjectCard({ project }) {
   const [activeMedia, setActiveMedia] = useState(0)
@@ -140,15 +141,20 @@ export function ProjectCard({ project }) {
 }
 
 export default function Projects() {
+  const { projects, isLoading, isRefreshing } = useProjects()
+
   return (
     <section className="projects">
       <div className="projects-container">
         <h1>My Projects</h1>
-        <div className="projects-grid-full">
-          {portfolioData.projects.map(project => (
+        <div className="projects-grid-full" aria-busy={isLoading} aria-live="polite">
+          {isLoading ? Array.from({ length: 2 }, (_, index) => (
+            <ProjectCardSkeleton key={index} />
+          )) : projects.map(project => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
+        {isRefreshing && !isLoading && <p className="projects-refresh-status">Refreshing projects…</p>}
       </div>
     </section>
   )
