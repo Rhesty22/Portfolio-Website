@@ -51,7 +51,7 @@ export const portfolioData = {
       position: 'Senior Full Stack Developer',
       duration: '2023 - Present',
       description: 'Led development of scalable web applications and mentored junior developers',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Docker'],
+      technologies: ['React', 'Node.js', 'MongoDB'],
     },
     {
       id: 2,

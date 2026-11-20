@@ -226,12 +226,6 @@ npm run build
 # Vercel auto-deploys on push
 ```
 
-### Docker
-```bash
-docker build -f Dockerfile -t portfolio-app .
-docker run -p 80:80 portfolio-app
-```
-
 ## Resources
 
 - [Tailwind CSS Docs](https://tailwindcss.com/docs)

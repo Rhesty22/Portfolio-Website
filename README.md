@@ -19,17 +19,13 @@ A modern, responsive portfolio website built with React and Vite. Perfect for sh
 
 ### Prerequisites
 
-**Option 1: Local Development**
+**Local Development**
 - Node.js (v14 or higher)
 - npm or yarn
 
-**Option 2: Docker**
-- Docker
-- Docker Compose (optional, but recommended)
-
 ### Installation
 
-#### Option 1: Local Development
+#### Local Development
 
 1. Navigate to the project directory:
    ```bash
@@ -48,37 +44,6 @@ A modern, responsive portfolio website built with React and Vite. Perfect for sh
 
 4. Open your browser and visit `http://localhost:5173`
 
-#### Option 2: Docker Development
-
-1. Navigate to the project directory:
-   ```bash
-   cd "Portfolio Website"
-   ```
-
-2. Run with Docker Compose (recommended):
-   ```bash
-   docker-compose -f docker-compose.dev.yml up
-   ```
-
-3. Open your browser and visit `http://localhost:5173`
-
-4. To stop the container:
-   ```bash
-   docker-compose -f docker-compose.dev.yml down
-   ```
-
-**Alternative Docker commands:**
-
-Build the development image:
-```bash
-docker build -f Dockerfile.dev -t portfolio-dev .
-```
-
-Run the development container:
-```bash
-docker run -p 5173:5173 -v $(pwd):/app portfolio-dev
-```
-
 ## Building for Production
 
 ### Local Build
@@ -87,30 +52,6 @@ npm run build
 ```
 
 The optimized build will be in the `dist` folder, ready for deployment.
-
-### Docker Production Build
-
-Build the production image:
-```bash
-docker build -t portfolio-website .
-```
-
-Run the production container:
-```bash
-docker run -p 3000:3000 portfolio-website
-```
-
-With Docker Compose:
-```bash
-docker-compose up -d
-```
-
-Access your portfolio at `http://localhost:3000`
-
-To stop the container:
-```bash
-docker-compose down
-```
 
 ## Project Structure
 
@@ -180,108 +121,12 @@ Add or remove navigation links in `src/components/Navigation.jsx`
 2. Run: `npm run build`
 3. Push the `dist` folder to `gh-pages` branch
 
-### Docker Deployment
-
-#### Deploy to Docker Hub
-
-1. Create a Docker Hub account at [dockerhub.com](https://hub.docker.com)
-
-2. Build and tag your image:
-   ```bash
-   docker build -t yourusername/portfolio-website:latest .
-   ```
-
-3. Push to Docker Hub:
-   ```bash
-   docker login
-   docker push yourusername/portfolio-website:latest
-   ```
-
-4. Others can now run your portfolio:
-   ```bash
-   docker run -p 3000:3000 yourusername/portfolio-website:latest
-   ```
-
-#### Deploy to AWS (ECS/Fargate)
-1. Create an ECR repository
-2. Build and push your image to ECR
-3. Create an ECS task definition using the image
-4. Deploy the service
-
-#### Deploy to DigitalOcean App Platform
-1. Push code to GitHub
-2. Connect your GitHub repo to DigitalOcean
-3. Create an app and select Docker from the Dockerfile
-4. Deploy with one click!
-
-#### Deploy to Heroku (with Docker)
-1. Login to Heroku: `heroku login`
-2. Create app: `heroku create your-app-name`
-3. Build and push:
-   ```bash
-   heroku container:push web
-   heroku container:release web
-   ```
-
 ## Technologies Used
 
 - **React 18** - UI library
 - **Vite** - Build tool and dev server
 - **React Router** - Client-side routing
 - **CSS3** - Styling with custom properties
-- **Docker** - Container orchestration
-
-## Docker Reference
-
-### Files Included
-
-- **Dockerfile** - Production image configuration
-- **Dockerfile.dev** - Development image configuration  
-- **docker-compose.yml** - Production container orchestration
-- **docker-compose.dev.yml** - Development container orchestration
-- **.dockerignore** - Files to exclude from Docker build
-
-### Common Docker Commands
-
-**Development:**
-```bash
-# Start development container
-docker-compose -f docker-compose.dev.yml up
-
-# Stop development container
-docker-compose -f docker-compose.dev.yml down
-
-# Build dev image
-docker build -f Dockerfile.dev -t portfolio-dev .
-```
-
-**Production:**
-```bash
-# Start production container
-docker-compose up
-
-# Stop production container
-docker-compose down
-
-# Build production image
-docker build -t portfolio-website .
-
-# Run production container
-docker run -p 3000:3000 portfolio-website
-```
-
-**Troubleshooting:**
-```bash
-# View container logs
-docker-compose logs -f portfolio
-
-# Access container shell
-docker exec -it portfolio-website sh
-
-# Remove all containers
-docker-compose down -v
-```
-
 ## Next Steps
 
 1. **Personalize**: Update all content with your information

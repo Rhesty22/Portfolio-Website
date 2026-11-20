@@ -55,7 +55,6 @@ DLG Portfolio Website/
 ├── index.html                     # HTML entry point
 ├── package.json                   # Dependencies and scripts
 ├── DESIGN_SYSTEM.md               # Design system documentation
-└── DOCKER_SETUP.md                # Docker setup guide
 ```
 
 ## Component Categories

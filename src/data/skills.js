@@ -9,7 +9,7 @@ export const skillsData = [
   },
   {
     category: 'Development Tools',
-    items: ['Unity', 'Unity Editor', 'Docker', 'Docker Compose', 'Git', 'GitHub', 'VS Code', 'Vercel'],
+    items: ['Unity', 'Unity Editor', 'Git', 'GitHub', 'VS Code', 'Vercel'],
   },
   {
     category: 'Game Development',
